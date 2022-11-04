@@ -1,0 +1,704 @@
+Visual:
+	A skelton / component which displays data or data in graphical presentation.
+Two Types of visuals
+	a) Non Field Visual [ No column assignment]
+		Ex:
+			Image
+			Textbox
+			Shapes
+			Buttons: Perform action based on events
+	b) Field Visual [Column assigned]
+
+		1) Data Display
+			Two types
+				a) Single Field Display 
+					Ex: Card
+				b) Multi Field Display
+					Ex: Multi-Row Card, Table, Matrix
+		2) Data + Graphical Display
+				Two Types
+				a) Simple Graphical Visuals
+					Ex: KPI, Gauge etc.
+				b) Complex graphical visuals
+					Ex: Charts, Maps etc.
+Responsive visualizations automatically adapt their size to offer a data-optimized view across different screen sizes. Thus, you can create one visualization and add it to Power BI reports and dashboards displayed on large screens and on the smallest devices.
+
+Z-Order : This order will control visuals and over lapping.
+
+Edit Interaction: Visuals support cross filtering, cross highlighting etc. options.
+Report Creation Based on Technical Design Document [TDD]
+
+		a) Page settings : Size, Hight, Width, Tool tip, Background etc.
+		b) Page View Settings: Actual Size, FitToPage, Fit to width
+		c) Theme: Common colors, fonts, sizes across report pages
+		d) Visuals: Based on the business functionality we will take correct visual
+		e) Concepts: Navigations, Actions, Mouse Hover etc.
+		f) Mobile View : Default is Landscape view, you can convert into portait view etc.
+
+		
+Lock aspect ratio: Resizing the visual horizontal and vertical proportional.
+
+Text wrap: If the length of the text is more automatically divided into multiple lines.
+
+Alt Text: Narrator (screen reader) will read the the content mentioned in the textbox area.
+
+All Visuals Common Format Properties:
+		General
+			a) Properties b) Alt Text c) Header Icons d) BackGround e) Title etc.
+
+Action:
+	When we click, it performs respective operation.
+	a) Back: Going back to the previous page
+	b) Page Navigation: Going to the respective page
+	c) Bookmark: Going to therespective bookmarks
+	d) QA: Opening QA dialogue box
+	e) URL: Opening respective URL
+	f) Drill through: Opening respective page with required visual information
+
+
+QA Button action drawbacks:
+
+	a) The result we can't save
+	b) QA default button format we can't change
+
+	Hence MS announced a QA visual [both possible], this QA visual is AI visual.
+
+
+Bookmark:
+	Which creates a snapshot from visual or page.
+	Two types
+	a) Report bookmarks: Developer created at Power BI Desktop level
+	b) Personal bookmarks: User create while browsing at Power BI Service
+	
+	Advantages:
+	a) User can create his interested areas and see all those after browsing
+	b) Bookmark actions possible
+
+Field Visuals:
+	
+	Data Display visuals:
+		
+	a) Card Visual:
+
+			Single value placing holder
+			It supports either measure or column with aggregation
+
+	b) Multi-row card: [Row visual] : We can split into rows
+
+			Multiple cards in a row and multiple rows in a visual.
+		
+			Adv:
+			Categories and rows show, rows can split.
+			
+			Not possible things :
+
+			Aggregated data on top / bottom
+			Titles on top / bottom
+			Format control [row / column] based on values
+
+	c) Table Visual: 	[Column visual]
+
+			a) Columnar Visual [column by column formatted visual]
+			b) Support headers and aggregate values on top / bottom
+			c) To show more records
+
+			d) Row formatting, Column formatting [static, conditional]
+	
+
+			
+		Conditional Formatting ways:
+		a) Gradient: Low-High colors [medium applicable]
+		b) Rules: Based on conditions
+		c) Field Value: Based on field value formatting another field
+
+		Disadv:
+			Drill down and drill up not possible
+			Row Vs Column not possible
+
+	d) Matrix Visual: [Row Vs. Column]
+
+			a) Cross Tab reporting visual which displays Row Vs. Column
+			b) Simply
+				Table + Rows+ Drilldown-Drillup+ Row and Column Grand and Sub Totals
+			Disadv:
+			Not for many rows [limited categories]
+
+
+			--Data Display Visuals Completed-----------------
+
+			Note: Matrix format options slightly different from table...additional features of matrix
+				available in formating area inaddition to table format options
+
+
+
+Simple Graphical Visuals:	KPI, Gauge, Bullet Chart etc.
+
+		KPI: Key Performance Indicator
+
+		  a) Important business values display in images, icons etc.
+		  b) It talks about current value reached target or not.
+		  c) We have KPI for overall business values
+
+		Ex: Locations KPI-To see all locations Current business value Vs. Target
+		     Courses KPI- To see all courses Current business value Vs. Target
+		
+		      Real-world:
+			a) Traffic signal[red, green, yellow]
+			b) Out / Not Out 
+			c) Market status ...up or down arrow...
+
+		Note: Colors, Fonts etc. controlled either static / dynamic (conditions based)
+
+		Gauge Visual:  KPI + minimum + maxium
+
+			   Real-world:
+			a) Car, bike, bus etc. speedo meter [radial gauge of 180 degress]
+			b) BP Machine, water level, milk purity machines...Linear Gauge
+
+			Reading Visual: In the range of 5M to 25M, current business reached 22M, there is a gap to target 			and scope to maximum value.
+
+=========================
+Bullet Chart [KPI multi category visual]
+=========================
+It is also a KPI, but it displays multiple categories and status.
+Bullet Chart: Gauge + Needs improvement + Satisfactory+ Good+ Very Good+Target1+Target2
+
+Situation:
+An organization has 10  courses, each course business status want to see...among multiple status information ...
+
+Multiple categories and each category a status...bullet chart
+
+
+====================================================
+Situation:
+a) I want to compare all business locations and values  [Comparing]
+b) I want to see male and female distribution in each year [Contribution]
+c) I want to see Sales Vs Manufacturing status [Relationship]
+etc.
+
+Multi Categories...Compare / Group / Relationship / Contribution
+
+=====================================================
+
+		
+=============================		
+Charts: 
+=============================
+	Charts designed for four operations.
+	a) Compare: One item compared to another with value and bar
+	b) Composition: Multiple items combined percentage 100 %...Invidual item percentage displayed
+	c) Distribute: With in the parent child value distribution
+	d) Relationships: One value relationship with another value
+
+	Bar Charts: Bar for comparing
+	Stacked: For distribution [compulsary child required]
+	Clustered: For grouping [ compulsary child required]
+	
+	-----------------------------------------------------------------------------------
+	Stacked Bar Charts: 	Distribution and Comaprison charts :  *Parent and Child
+	-----------------------------------------------------------------------------------
+	a) With in parents childs distributed and compared
+	b) Parents also compared
+
+	-----------------------------------------------------------------------------------
+	100% Stacked Bar: Composition Distribution Comparing: **Childs operation
+	-----------------------------------------------------------------------------------
+	a) With in parents childs composition, distributed and compared
+	b) Parents bar lengths same
+
+	-----------------------------------------------------------------------------------
+	Clustered Bar Chart: Grouping and Comparing : **Childs comparison
+	-----------------------------------------------------------------------------------
+	a) With in the parent childs grouped and compared
+	b) Across parents childs compared
+
+
+When do you go for Row or Column charts?
+	Depending on the area
+	More space / Less space / Portait View / Landscape View
+
+=============
+Rounded Charts:
+=============
+	a) Rounded charts: [ Shape in rounded format]
+     		 Above bar charts do not support parent category composition.
+    		1. 100% consideration of all slices / ARCs[More value big slice, less value small slice]
+    		2. Easy understanding for less categories [ 5 to 6 categories appear good]
+    		3. Also help us for comparing the slice values 
+      		  [More size more value, Less size less value]
+   		 4. These occupy less space [image area]
+		5. Slices /ARCs in the order of high to low                
+         
+   		Example: Pie, Donut (hole with size / has inner radius) etc...
+   		 Purpose:              a) Composition b) Comparison       
+    
+		 Composition: Percentage Comparing: Size of Slice    
+		 Requirement:      One Textual (can have sub textual) and one measurable
+
+Pie							Donut
+
+Rounded Shape					Rounded ring shape
+Composition and Comparing				Composition and Comparing
+Slices based comparing				ARC based comparisons
+We can’t place a visual in Pie	Donut allows visual
+Pie can’t be converted to Donut with feature		Donut can be converted to pie.
+						0% radius is Pie [more than zero is donut]
+
+
+
+
+
+Trend Analysis:
+		This is possible with Line chart.
+		Trend: Multiple categories connecting together to analyse.
+
+		Line: 
+			Multiple points connected using line to see up, down, and stream trend
+			
+			Secondary y-Axis: analysing one more measure along with general y-axis
+			Legend: Child value trend analysis
+			Note: When we take secondary y-axis, legend is not possible.
+
+
+		Area:
+			a) Lines area filled with colors
+			b) Color overlapping is there
+			c) Actual business values and lines trend
+
+
+		Stacked Area:
+			a) Child values presented from low to high [top to bottom]
+			b) No color pverlapping
+			c) Actual business values and lines trend varies
+
+		Line and Stacked Column:  [Mixed chart]
+			
+			Trend analysis on one measure + distribution and comparing on another measure
+
+		Line and Clustered Column: [ Mixed Chart]
+			
+			Trend analysis on one measure + Grouping and comparing on another measure
+
+
+		Ribbon Chart:
+			Stacked Column + child values distributed top to bottom + child values trend covered using ribbon 
+
+		===========
+		Funnel Chart:
+		===========
+				a) Categories in cylinders
+				b) Top to bottom analysis
+				c) Majorly for stage wise analysis in an environment
+				d) Always displays current value in the percent of previous and actual value
+
+	 	===========
+		Waterfall Chart
+		===========
+				However water flows the same way
+				a)Values up and down, not trend...
+				b)Mostly postive and negative values show
+				Red: Loss, small bar: less loss  bigger bar: more loss
+				Green: Profit  Small bar: Less profit   bigger bar: more profit
+
+		========
+		Scatter Chart
+		========
+				a) Multi Axis chart
+				b) First chart which establishes relationship between two measures for categories
+				c) Also has one more axis (called Play-Axis) to play with the presentation [filter visual]
+				d) Relationship values in bubbles, hence bubble size can be controlled with another 							measure		
+				
+			Note: Maximum 3 measures and Maxium three categories we can take
+				Measures: X-Axis, Y-Axis, Bubble Size
+				Categories: Legend, Play Axis
+
+
+			Ex: Demand and Supply of products you want to see in all locations
+			      Manufacturing Vs Sales relationship
+
+
+		Small Multiple:
+				Multiple charts for the given category
+
+		Key Influencer:
+				a) AI visual [ inside algorithms will decide the process and result]								b) Displays key influencing factors for business [or any] increase / descrease
+				
+		Decomposition Tree:
+				
+				a) AI visual [ inside algorithms will decide the process and result]		
+				b) If you want to see how a value generated from multiple categories and sub 							categories, it is helpful
+
+		Smart Narrative:
+	
+				Gives the narrration for the visual / visuals in a page.
+				So that end user will understand and progress easily.
+
+				You can add your own values, you can modify existing, and you can link to new URLs.
+
+		R and Python:
+				
+				Refer to material
+				R and Python
+==============================================================
+
+R			PYTHON
+Statistical Language	General purpose programming languages
+Statisticians use this	Normal programming, statistics, and many more operations
+Support Data Science	Support Programming, Data Science, AI, Analytics etc.
+
+
+R and Python in Power BI
+==============================================================
+We have these languages in two places
+
+a) Power Query: 
+
+		a) Here to extract, transform with custom rules and protocols 
+		
+b) If the given transforms not sufficient, you want to perform more statistical and 
+
+data science related calculations,	then R (statistical lang) and Python (general 
+
+purpose very powerful lang) are used.
+
+b) Power View level:
+
+	        If the existing visuals not sufficient and you want to generate custom visuals using R 
+
+and Python, then use R, Python options.
+
+	
+		Paginated Report Visual:
+				Recently added to show paginated report in non paginated report page.
+				Note: paginated reports extension is .rdl [SSRS / Power Bi Report Builder / Formatted 					Table report]
+
+=============
+Pre-Requisite
+==============
+
+a) Install R / Python (or Anaconda) software [mandatory], add the path in the environment variables [optional]
+
+1st way: File menu Options and Settings R / Python Scripting and Click Install
+2nd Way: Google it and Install
+
+b) Download required Libraries or Packages, Classes and Methods [which you want to use]
+
+c)  Ensure those environmental paths specified in the Power BI Desktop, File Menu->Options
+
+d) Take R or Python visual on the report view, write the code in code editor, click run to 
+
+generate the visual with data.
+
+
+
+
+Paginated Report Visual:
+
+		You want to show paginated report inside non paginated pages, this visual is helpful.
+		Paginated: Splitting rows into multiple pages and also prinatble.
+			  Legacy mechanism.
+			 By using Power Bi Report Builder / SSRS Report Builder / SSDT we will create.
+			The extension of the report is ".rdl" [Report Definition Language]
+
+===========================================================================
+
+
+
+
+		Map Visual:
+			a) Geo spatial maps generation
+			b) Display locations or points and their business values
+			c) Controlling the locations and points with business values
+			
+			What we require?
+
+			a) Longitude and lattitude [if we don't know the locations]
+					Ex: You sitting positions map
+					      You are flying...fly points ...
+			b) Location names
+
+		Maps:
+			a) Normal Map [Bubble Map] : Initial
+			b) Filled area 
+			c) Shape map [2019]
+			d) ARCGIS Map [2020]
+			Note: MS copied the heat map partial operation in bubble map
+
+
+	Bubble map:
+			1. Locations or longitude and lattitude in the form of bubbles
+			2. Bubble size controlled based on values [bigger bubble: more size, small bubble: less size]
+			3. World map [Bing map]
+			4. Supports zoom different options and also map type
+			5. Can be converted to Heat Map
+			6. Supports cross highlighting and filtering [edit interactions supported]
+			7. Colors can be controlled either static / conditional expressions
+
+
+	Filled Area Map:	
+
+			1. Locations or longitude and lattitude displaed as map locations
+			2. Map locations colors controlled based on values 
+				[Thick color: more value, Light bubble: less size]
+			3. World map [Bing map]
+			4. Supports zoom different options and also map type
+			5. Supports cross highlighting and filtering [edit interactions supported]
+			6. Colors can be controlled either static / conditional expressions
+
+
+	Shape Map: [2019]
+			
+			1. Locations or longitude and lattitude displayed as map locations
+			2. Map locations colors controlled based on values 
+				[Thick color: more value, Light bubble: less size]
+			3. Required area map [own shape map]
+			4. Supports zoom different options and also map type
+			5. Supports cross highlighting and filtering [edit interactions supported]
+			6. Colors can be controlled either static / conditional expressions [more color formatting]
+
+			Note: Few locations by default available, for your customized locations need to add JSON file
+				with locations.
+
+			If you don't shape map in the visuals list, go to file menu-->options and settings-->preview 			features-> tick mark shape map
+
+
+		The below web site helps to bring Longitude and lattitude value
+
+			https://quakesearch.geonet.org.nz/
+
+
+	ARCGIS Map: 
+
+			Power View menu options
+			Many beautiful options available...let me explain...
+
+			d)ARCGis Visual
+			 [Aeronautical Reconnaissance Coverage Geographic Information System]
+			  [It has many visual formatting, colors, shapes etc. features than above all]
+ 		
+			1) Microsoft joined with ESRI [Environmental System Research Institute] organization 
+				to get ArcGis maps [SSRS supporting this map]
+				    Many companies asked Microsoft a Powerful mapping, 
+				i.e ArcGis  ArcGis added recently.
+			2) It has many layers, many options, many controls, many ways of display etc.
+			3) One of the complex map and more detailed map in the mapping visuals.
+			4) It was added in 2020 
+			5) It has the functionality of Bullet Map + Shape Map+ Filled Map + Other Features
+
+
+
+Custom Visuals Used:
+
+			a) Histogram Chart
+			b) Scroller
+			c) Heat Map
+			d) Multi KPI Chart
+			e) Gantt Chart [ Tasks, allocations, work management etc.]
+			f) Power ON 
+
+How to change the langauge of Power BI Desktop content and model?
+
+File menu-->options and settings-->regional setting
+
+Sensitivity label:
+
+Sensitivity labels from Microsoft Purview Information Protection on your reports, dashboards, datasets, dataflows, and .pbix files can guard your sensitive content against unauthorized data access and leakage. Labeling your data correctly with sensitivity labels ensures that only authorized people can access your data. This article shows you how to apply sensitivity labels in the Power BI service and in Power BI Desktop.
+
+
+Diff between lock object and lock aspect?
+lock object does not support moving the object, whereas lock aspect talks abot resize of a visual.
+
+When you highlight a visual, you will get two additional menus.
+a) Format b)Data / Drill
+
+When you highlight a Field, you will get two more additional menus.
+a) Column tools b) Table Tools
+
+Bring to front--> All layers front
+Bring forward--> One layer forward
+
+Send to back--> All layers back
+Send backward-> One layer back
+
+
+A visual processing:
+	Visual internal process:
+		a) DAX query generated
+		b) DAX query hit on dataset and brings data
+		c) Places data on skelton
+		d) Visual data formatting [static and conditional]
+
+		Total visual time= a+b+c+d
+
+Visual Table:
+		Visual level data display table information
+DataPoint Table:     A particular data point level data information
+
+		===================================
+		User interaction in the report and visuals communication
+		===================================
+		There are multiple ways of visuals communication / user interactive communication
+		a) Edit interactions
+			We can control how you can show other visual when you browse / slice current visual.
+			Three options
+			1. CrossFilter  2.CrossHighlight 3. None
+
+		b) Parameters at Power Query
+			Little old mechanism available at Power Query, not fully user fiendly at visuals.
+			Note: Used for environment connections [Dev settings, Test settings, Prod settins etc.]
+				 in the projects.
+
+		c) Slicers
+			What? An user interactive visual
+			How it appears? Multiple ways
+					a) List : Checkbox items : Numbers, Text, Date etc.
+					b) Drowdown: Number, Text, Date etc.
+					c) Between and : Numbers and Dates
+					d) Less than or equal to: Numbers
+					e) Greater than or equal to: Numbers
+					f)  Is After: Dates
+					g) Is Before: Dates
+
+			Orientation:
+					Horizontal: Appear like buttons  [ recently added inspred from Chicklet slicer]
+					Vertical: As a list of values
+
+			Fields?
+					Till 2021, only one field.
+					Now, it supports multiple fields and hierarchies [inspired from hierarchy slicer]
+			Sync Slicer?
+					Common slicing between multiple pages [may be all / required]
+
+
+
+			When do we go for List option?
+					Less values
+			When do we go for Dropdown / Between and other options?
+					More values
+			What are the recently added features to slicer?
+					a) Hierarchy  b) Button slicing
+
+				
+		d) Filters
+			
+			Manual static option specified at filter pane.
+			Four types of filters
+			a) Visual Filter: Only visual filtered. It has filter options TOP N, Advanced, Basic
+			b) Page Filter: All visuals in the page filtered: It has filter options Advanced, Basic
+			c)  Report Filter: All pages in the report filter: It has filter options Advanced, Basic
+			d) Drillthrough filter:
+				Two types
+				a) Single report drill through: One page to another page in the same report
+				b) CrossReport drill through: One page in one report to another page in another report
+		
+			Which page we usually consider  drill through page?
+				The page which acts like child / detailed data
+
+			What happens when we consider a page as drill through?
+				System takes back button on the page. 
+
+			Differences between sync slicer and report filter?
+
+				Sync slicer: a) Filtering may be required / all pages b) It has no options
+				Report Filter: a) Filtering all pages  b) It has options [ Basic, Advanced]
+
+			Why Page and Report do not have 'Top N' option?
+
+				In a page we may have single value visuals, in this situation TOP N does not work.
+				Hence, scientists restricted to visual only.
+				Ex: Card, KPI etc...they do not support multiple values...hence no TOP N
+
+			Differences between filter and slicer?
+			Slicer					Filter
+			-----					-------
+			User interactive visual			Not a visual
+			Display options available[List, Dropdown etc.]	No display options [only pane level]
+			Sync Slicing possible on required pages		Not possible [report all visuals sync possible]
+			
+
+		c) What-if parameters
+
+			It has slicer + parameter mechansim
+
+			Why added?
+				To provide user interaction using slicer visual + manual entering of values
+
+			Adv:
+				Above point + manual entered value / slicer value we can store and use in other areas.
+				[Note: That area is parameter area]
+
+			Concept:
+
+			User enter / selected value-->Parameter--> Visual / Calculation
+
+		Example:
+		Calculation based on the user input "year"
+		Total DF based on user sel year=CALCULATE(sum(FactPayments[Discount_Fee]),filter(DimDate,DimDate				[Year]=paryear[paryear Value]))
+		==================================================================
+
+
+
+	Performance Analyzer:
+
+		Added in 2021 to see visuals performance in  a page.
+		How each visual is running with internal process and time taking.
+		
+		Visual internal process:
+
+		a) DAX query generated
+		b) DAX query hit on dataset and brings data
+		c) Places data on skelton
+		d) Visual data formatting [static and conditional]
+
+		Total visual time= a+b+c+d
+		
+		Adv:
+		a) You can see the process
+		b) If there is a time delay or more time, you can identify and optimize the area.
+
+		a) DAX query optimization:
+			Take the query to the DAX studio (or any), generate plan, see the plan and take action 
+			accordingly.
+		b) Format optimization
+			Remove unnecessary conditional formatting and other custom expression options
+
+-------------------------------------------------------------------------------
+DAX Studio: More information, refer to DAX Materials [PDF-3]
+-------------------------------------------------------------------------------
+	The studio where we work on DAX queries.
+
+	a) To write queries on the dataset as part of evaluation [Data testing on measures]
+	b) To improve visual performance
+
+	Download and Install:Google it and download, light weight software.
+	
+	Execution Components: DAX studio runs queries against the below components.
+
+	a) Power Pivot
+	b) Power BI Dataset
+	c) Tabular Cubes
+	
+	
+
+		*****Visuals Topic Completed  [Visuals, Visual Format Options, Custom visuals and Visual Interactions] ***************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
