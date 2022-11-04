@@ -1,12 +1,18 @@
+**********************************************************************************
+Visuals, Types, Field, Non Field, Data, More Graphical etc.
+********************************************************************************
 Visual:
 	A skelton / component which displays data or data in graphical presentation.
-Two Types of visuals
+
+	Two Types of visuals
+
 	a) Non Field Visual [ No column assignment]
 		Ex:
 			Image
 			Textbox
 			Shapes
 			Buttons: Perform action based on events
+
 	b) Field Visual [Column assigned]
 
 		1) Data Display
@@ -14,7 +20,7 @@ Two Types of visuals
 				a) Single Field Display 
 					Ex: Card
 				b) Multi Field Display
-					Ex: Multi-Row Card, Table, Matrix
+					Ex: Multi-Row Card, Table and Matrix
 		2) Data + Graphical Display
 				Two Types
 				a) Simple Graphical Visuals
